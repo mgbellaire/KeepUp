@@ -9,5 +9,6 @@ if [ -x "$(command -v brew)" ]; then
 fi
 
 if [ -x "$(command -v composer)" ]; then
-# TODO: Update composer packagrs
+  # Update Composer packages that live in ~/.composer.
+  composer global update
 fi
