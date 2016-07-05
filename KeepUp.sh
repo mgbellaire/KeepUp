@@ -42,7 +42,7 @@ if [ -a ~/.composer/vendor/drupal/coder/coder_sniffer ]; then
   # Update Drupal Coding Standards.
   # Suppress any output from command in favor of a custom response for success/failure.
   phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer > /dev/null
-  if [ $? -q 0 ]; then
+  if [ $? -eq 0 ]; then
     echo 'Drupal Coding Standards were updated successfully.'
   else
     echo 'WARNING: Issue updating Drupal Coding Standards. Please run `phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer` to debug any errors.'
