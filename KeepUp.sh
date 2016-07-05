@@ -14,7 +14,7 @@ if [ -x "$(command -v brew)" ]; then
   # Update Homebrew packages.
   brew update
   # Upgrade Homebrew packages.
-  brew upgrade all
+  brew upgrade
 fi
 
 # Composer.
