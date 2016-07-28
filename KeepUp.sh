@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# TODO: Do the work.
 # Set up environment.
 if [ ! -d ./src ]; then
     echo 'Setting up environment...'
