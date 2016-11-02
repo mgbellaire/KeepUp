@@ -16,9 +16,6 @@ if [ -x "$(command -v brew)" ]; then
     # Update Homebrew packages.
     brew update
     echo
-    printf "\e[3;32m--- Upgrading Homebrew packages ---\e[0m\n"
-    # Upgrade Homebrew packages.
-    brew upgrade
 fi
 
 # Composer.
@@ -58,4 +55,10 @@ if [ -a ~/.composer/vendor/drupal/coder/coder_sniffer ]; then
     else
         printf "\e[3;4;33mWARNING: Issue updating Drupal Coding Standards. Please run 'phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer' to debug any errors.\e[0m"
     fi
+fi
+
+if [ -x "$(command -v brew)" ]; then
+    # Showing upgradable Homebrew packages.
+    printf "\e[3;32m--- Upgradable Homebrew packages ---\e[0m\n"
+    brew outdated
 fi
