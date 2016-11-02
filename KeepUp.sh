@@ -16,9 +16,6 @@ if [ -x "$(command -v brew)" ]; then
     # Update Homebrew packages.
     brew update
     echo
-    printf "\e[3;32m--- Upgrading Homebrew packages ---\e[0m\n"
-    # Upgrade Homebrew packages.
-    brew upgrade
 fi
 
 # Composer.
