@@ -56,3 +56,9 @@ if [ -a ~/.composer/vendor/drupal/coder/coder_sniffer ]; then
         printf "\e[3;4;33mWARNING: Issue updating Drupal Coding Standards. Please run 'phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer' to debug any errors.\e[0m"
     fi
 fi
+
+if [ -x "$(command -v brew)" ]; then
+    # Showing upgradable Homebrew packages.
+    printf "\e[3;32m--- Upgradable Homebrew packages ---\e[0m\n"
+    brew outdated
+fi
